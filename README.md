@@ -32,15 +32,17 @@ flowchart TD;
 ## On the isolated computer
 
 ```bash
+python3 send_serial_esp32.py
+```
+
+## On the ROS computer
+
+```bash
 roscore
 ```
 
 ```bash
 rosrun rosserial_python serial_node.py tcp
-```
-
-```bash
-python3 send_serial_esp32.py
 ```
 
 ## On the ESP32

@@ -17,16 +17,16 @@ Tutorial on making an ESP32 ROS Companion, that uses serial communication to rea
 
 # Use case
 
-The code provided in this repo can be used to test a simple application. The objective is to iteratively read a 6DOF pose data on a Python code, sending it through serial and then encapsulating it as a PoseStamped message to a topic in the ROS network via Wi-Fi. The following chart shows the flow of data.
+The code provided in this repo can be used to test a simple application. The objective is to iteratively read a 6DOF pose data on a Python code, sending it through serial and then encapsulating it as a PoseStamped message to a topic in the ROS network via Wi-Fi. The following chart shows the flow of data in a sample case of 3 computers in a ROS network.
 
 ```mermaid
 flowchart TD;
     A[Isolated 
     Computer] -->|Serial| B(ESP32);
     B --> |Wi-Fi|C{Router};
-    C -->|Wi-Fi| D[Computer A];
-    C -->|Wi-Fi| E[Computer B];
-    C -->|Wi-Fi| F[Computer C];
+    C -->|Wi-Fi| D[ROS computer A];
+    C -->|Wi-Fi| E[ROS computer B];
+    C -->|Wi-Fi| F[ROS computer C];
 ```
 
 ## On the isolated computer

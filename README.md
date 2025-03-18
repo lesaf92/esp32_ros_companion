@@ -24,9 +24,9 @@ flowchart TD;
     A[Isolated 
     Computer] -->|Serial| B(ESP32);
     B --> |Wi-Fi|C{Router};
-    C -->|Wi-Fi| D[ROS computer A];
-    C -->|Wi-Fi| E[ROS computer B];
-    C -->|Wi-Fi| F[ROS computer C];
+    C <-->|Wi-Fi| D[ROS computer A];
+    C <-->|Wi-Fi| E[ROS computer B];
+    C <-->|Wi-Fi| F[ROS computer C];
 ```
 
 ## On the isolated computer

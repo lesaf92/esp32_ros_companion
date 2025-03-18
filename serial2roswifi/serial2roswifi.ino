@@ -7,12 +7,12 @@
 
 // ESP32 IP
 IPAddress ip(192, 168, 0, 101);
-// rosserial host PC IP
+// ROS host PC IP
 IPAddress server(192, 168, 0, 104);
-uint16_t serverPort = 11411; // coded in ArduinoTcpHardware.h
-// WiFi credentials
-const char *ssid = "LMI_2";
-const char *password = "ea254@ea254";
+uint16_t serverPort = 11411; // hardcoded in ArduinoTcpHardware.h, leave this way if you did not change there
+// WiFi credentials, change to your case
+const char *ssid = "ssid";
+const char *password = "pass";
 
 // ros stuff
 ros::NodeHandle  nh;
